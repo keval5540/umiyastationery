@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umiya Stationery Store - Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4A90E2; /* Blue color */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .hero {
+            background-color: #EDEDED; /* Light gray background */
+            text-align: center;
+            padding: 40px 0;
+        }
+        .hero h2 {
+            color: #333; /* Dark gray text */
+        }
+        .slideshow {
+            position: relative;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .slide {
+            display: none;
+        }
+        .slide img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .category-list, .product-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .category-item, .product-item {
+            background-color: white;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .product-item img {
+            max-width: 100px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4A90E2;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Umiya Stationery Store</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Welcome to Umiya Stationery Store</h2>
+        <p>Your one-stop shop for all stationery needs!</p>
+        <a href="products.html" class="btn">Shop Now</a>
+    </section>
+
+    <!-- Slideshow Section -->
+    <section class="slideshow">
+        <div class="slide fade">
+            <img src="C:/Users/DILIP/Documents/ad5.jpg" alt="Advertisement 1" style="width:100%;">
+        </div>
+        <div class="slide fade">
+            <img src="C:/Users/DILIP/Documents/ad6.jpg" alt="Advertisement 2" style="width:100%;">
+        </div>
+ 
+
+    <footer>
+        <p>&copy; 2024 Umiya Stationery Store</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            const slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex - 1].style.display = "block";  
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+</html>
